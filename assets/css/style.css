@@ -1,0 +1,21 @@
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+header {
+    height: 70px;
+}
+
+.ms-logo {
+    height: 100%;
+}
+
+.ms-logo img {
+    height: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+}
