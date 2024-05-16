@@ -1,13 +1,36 @@
 <?php 
-  
-  $crocchette = new DogsItem ("Crocchette di Manzo", "Royal Canin", "Cibo","https://petmarket.it/12135-medium_default/medi-adult-7-kg4-royal-canin.jpg", "Cane", "1kg", "12,99$");
-  $pallina = new DogsItem ("Pallina di gomma", "Morando", "Gioco","https://arcaplanet.vtexassets.com/arquivos/ids/229318/trixie-cane-palla-in-gomma-naturale-con-squittio.jpg?v=637454816312200000", "Cane", "20gr", "5,89$");
-  $collare = new DogsItem ("Collare antipulci", "Pro dogs", "Gadget","https://www.thekill.it/9814-large_default/collare-realizzato-in-morbido-cuoio.jpg","Cane","20gr","8,59$");
+// categoria servizi
 
-  $pepite = new CatsItem ("Pepite di pollo", "Natural Trainer", "Cibo","https://www.moby-dick.it/foto/prodotti/700/7107_al.jpg", "Gatto", "400gr", "9.90$");
-  $lettiera = new CatsItem ("Lettiera per gatti", "Magic Itter", "Cuccia&Pulizia","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROUiqdYc_unwJWWf3OpwhxOf-KdBnbHDhENg&s", "Gatto", null, "15.90$");
-  $spazzola = new CatsItem ("Spazzola con cuscinetto", "Pet clean", "Gadget","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrbVMlub8B-Cag3tdfw63dlQ7J_448bbVOQ&s","Gatto", "15gr", "5.50$");
+  $toileting = new Toileting("Pulizia del pelo", "Igiene", "56,99 $", 4);
+  $toileting->setQuantities(8);
+
+// categoria specie
+  $dog = new specie ('Cane', '<i class="fa-solid fa-dog"></i>');
+  $cat = new specie ('Gatto', '<i class="fa-solid fa-cat"></i>');
+
+  // categoria cibo
+  $crocchette = new Foods ("Crocchette di Manzo", "Royal Canin", "Cibo", $dog,"https://petmarket.it/12135-medium_default/medi-adult-7-kg4-royal-canin.jpg","12,99$", "Manzo con erbe tritate","25/09/2024", 2);
+  $pepite = new Foods ("Pepite di pollo", "Natural Trainer", "Cibo", $cat,"https://www.moby-dick.it/foto/prodotti/700/7107_al.jpg", "9.90$", "Pollo con creme di vegetali", "25/09/2024", 2);
+  $pepite->setQuantities(15);
+  var_dump($pepite);
+  $scatolette = new Foods ("Mousse di pollo", "Natural Trainer", "Cibo", $cat,"https://www.moby-dick.it/foto/prodotti/700/7107_al.jpg", "8.90$", "Pollo con creme di vegetali", "25/09/2024", 4);
+  $scatolette->setQuantities(10);
+  // var_dump($scatolette);
+  
+  // categoria gadget
+  $pallina = new Gadjets ("Pallina di gomma", "Morando", "Gadjet",$dog,"https://arcaplanet.vtexassets.com/arquivos/ids/229318/trixie-cane-palla-in-gomma-naturale-con-squittio.jpg?v=637454816312200000", "5,89$",['gomma','lattice'], ['Blu','Rossa','Verde']);
+  $collare = new Gadjets ("Collare antipulci", "Pro dogs", "Gadget",$dog,"https://www.thekill.it/9814-large_default/collare-realizzato-in-morbido-cuoio.jpg", "7,89$",['cuoio','metallo'], ['Blu','Rossa','Verde']);
+  $spazzola = new Gadjets ("Spazzola con cuscinetto", "Pet clean", "Gadget",$cat,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrbVMlub8B-Cag3tdfw63dlQ7J_448bbVOQ&s", "5,89$",['gomma','lattice'], ['Blu','Rossa','Verde']);
+  // var_dump($spazzola);
+
+  // categoria cuccie e pulizia
+  $paletta = new Kennels ("Paletta per gatti", "Magic Itter", "Cuccia&Pulizia",$cat,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROUiqdYc_unwJWWf3OpwhxOf-KdBnbHDhENg&s", "15.90$","25 cm",['plastica'],['Blu','Rossa','Verde']);
+  $lettiera = new Kennels ("Lettiera per gatti", "Magic Itter", "Cuccia&Pulizia",$cat,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROUiqdYc_unwJWWf3OpwhxOf-KdBnbHDhENg&s", "15.90$","60x80 cm",['plastica','alluminio'],['Blu','Rossa','Verde']);
+  $salviette = new Kennels ("Lettiera per gatti", "Magic Itter", "Cuccia&Pulizia",$cat,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROUiqdYc_unwJWWf3OpwhxOf-KdBnbHDhENg&s", "15.90$","",['plastica','alluminio'] ,['Blu','Rossa','Verde']);
  
-  $products = [$crocchette, $pallina, $collare, $pepite, $lettiera, $spazzola];
+  $products = [$crocchette, $scatolette, $pepite, $pallina, $collare, $spazzola, $lettiera, $paletta, $salviette];
+  $services = [$toileting];
+  $specie = [$dog, $cat];
+
   
 ?>

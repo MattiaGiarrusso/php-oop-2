@@ -1,9 +1,12 @@
 <?php
 require_once __DIR__ . '/Models/products.php';
-require_once __DIR__ . '/Models/dogsitem.php';
-require_once __DIR__ . '/Models/catsItem.php';
+require_once __DIR__ . '/Models/foods.php';
+require_once __DIR__ . '/Models/gadgets.php';
+require_once __DIR__ . '/Models/kennels.php';
+require_once __DIR__ . '/Models/specie.php';
+include_once __DIR__.'/Models/services.php';
+include_once __DIR__.'/Models/toileting.php';
 require_once __DIR__ . '/server.php';
-
 
 ?>
 
