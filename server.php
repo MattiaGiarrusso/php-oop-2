@@ -30,7 +30,5 @@
  
   $products = [$crocchette, $scatolette, $pepite, $pallina, $collare, $spazzola, $lettiera, $paletta, $salviette];
   $services = [$toileting];
-  $specie = [$dog, $cat];
-
-  
+  $specie = [$dog, $cat];  
 ?>
