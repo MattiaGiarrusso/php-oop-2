@@ -29,7 +29,7 @@ require_once __DIR__ . '/server.php';
         <?php include_once __DIR__. '/templates/mainCards.php'; ?>
     </main>
 
-    <footer class="bg-success d-flex align-items-center position-absolute bottom-0">
+    <footer class="bg-success d-flex align-items-center">
         <div class="container">
             <h5>By Boolean with <i class="fa-solid fa-paw"></i></h5>
         </div>
