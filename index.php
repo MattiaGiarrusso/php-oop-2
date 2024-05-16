@@ -22,7 +22,7 @@ require_once __DIR__ . '/server.php';
 </head>
 <body>
 
-    <header class="bg-success ">
+    <header class="bg-success d-flex align-items-center">
         <div class="container ms-logo">
             <img src="./assets/img/logo-petshop.png" alt="">
         </div>

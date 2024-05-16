@@ -18,7 +18,7 @@ include_once __DIR__.'/../Models/toileting.php';
                 <div class="card">
                     <div class="card-body">
                         <img src="<?php echo $product->image; ?>" class="card-img-top">
-                        <h5 class="card-title">Prodotto: <?php echo $product->name; ?></h5>
+                        <h5 class="card-title"><?php echo $product->name; ?></h5>
                         <?php if (property_exists($product, 'quantities')) { ?>
                             <h6 class="card-subtite">Quantità disponibili: <?php echo $product->getQuantities(); ?></h6>
                         <?php } ?>
@@ -31,10 +31,11 @@ include_once __DIR__.'/../Models/toileting.php';
                     </div>
                 </div>
             </div>
-    <?php } ?>
-    <?php foreach ($services as $service) { ?>
-    <div class="col-3">
-                <div class="card">
+        <?php } ?>
+
+        <?php foreach ($services as $service) { ?>
+            <div class="col-3">
+                <div class="card bg-warning">
                     <div class="card-body">
                         <h5 class="card-title">Servizio: <?php echo $service->name; ?></h5>
                         <?php if (property_exists($service, 'quantities')) { ?>
@@ -48,5 +49,6 @@ include_once __DIR__.'/../Models/toileting.php';
                 </div>
             </div>
         <?php } ?>
+
     </div>
 </div>
